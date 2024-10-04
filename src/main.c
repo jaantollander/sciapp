@@ -37,6 +37,8 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    // TODO: separate averagel to dynamically linked library to demonstrate dependencies
+
     // Read numbers from input file and calculate sum
     while (fscanf(input, "%lf", &num) == 1) {
         sum += num;

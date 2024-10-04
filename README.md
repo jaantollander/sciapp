@@ -1,4 +1,4 @@
-Simple application for demonstration purposes written in C.
+Simple scientific application for demonstration purposes written in C.
 We can build it with Make:
 
 ```bash
