@@ -2,8 +2,13 @@ CC := gcc
 CFLAGS := -Wall -Werror
 PREFIX := /usr/local
 
-BUILD_DIR := ./build
+# Source directory
 SRC_DIR := ./src
+
+# Build directory
+BUILD_DIR := ./build
+
+# Name of the target application
 TARGET := sciapp
 
 # Link object files to create the executable
@@ -15,6 +20,10 @@ $(BUILD_DIR)/$(TARGET): $(BUILD_DIR)/main.o
 $(BUILD_DIR)/main.o: $(SRC_DIR)/main.c
 	mkdir -p $(dir $@)
 	$(CC) -c $(CPPFLAGS) $(CFLAGS) $^ -o $@
+
+# Build all
+.PHONY: all
+all: $(BUILD_DIR)/$(TARGET)
 
 # Install the program
 .PHONY: install
